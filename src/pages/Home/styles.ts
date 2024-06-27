@@ -5,3 +5,8 @@ export const Container = styled.View`
   justify-content: center;
   align-items: center;
 `
+
+export const Text = styled.Text`
+  font-family: 'Inter-Bold';
+  font-size: 24px;
+`
