@@ -122,8 +122,6 @@ export const ContainerNextDates = styled.View`
 
   width: 100%;
   height: ${moderateScale(62)};
-
-  background-color: red;
 `
 
 export const ContainerDatePrimary = styled.View`
@@ -159,6 +157,31 @@ export const TextNextDate = styled.Text`
   text-align: center;
 `
 
-export const WrapperDateSecond = styled.View``
+export const WrapperDateSecond = styled.View`
+  background-color: transparent;
 
-export const TextDateSecond = styled.Text``
+  width: ${moderateScale(81)};
+  height: ${moderateScale(22)};
+
+  border: 1px solid ${(props) => props.theme.colors.base.white};
+  border-radius: ${moderateScale(6)};
+
+  padding: ${moderateScale(2)} ${moderateScale(3)};
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+  margin-right: ${moderateScale(6)};
+`
+
+export const TextDateSecond = styled.Text`
+  font-size: 12px;
+  font-family: 'Inter-Medium';
+  color: ${(props) => props.theme.colors.base.white};
+  letter-spacing: -5%;
+
+  padding: 0 ${moderateScale(3)};
+
+  text-align: center;
+`
