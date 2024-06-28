@@ -21,6 +21,8 @@ declare module 'styled-components/native' {
       button: string
       textButton: string
       textInfo: string
+      text: string
+      textInfoSecond: string
     }
 
     fonts: {

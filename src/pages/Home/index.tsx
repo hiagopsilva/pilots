@@ -2,6 +2,7 @@
 import React from 'react'
 import {Container, Text} from './styles'
 import {TouchableOpacity} from 'react-native'
+import Header from '../../components/Header'
 
 type Props = {
   navigation: any
@@ -10,6 +11,8 @@ type Props = {
 const Home: React.FC<Props> = ({navigation}) => {
   return (
     <Container>
+      <Header name="Ana Paula" />
+
       <Text>Hello Pilots</Text>
 
       <TouchableOpacity onPress={() => navigation.navigate('Details')}>

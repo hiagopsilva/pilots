@@ -12,12 +12,18 @@ export default {
     neutro900: '#1C1917',
     neutro950: '#0C0A09',
 
-    base: '#fff',
+    base: {
+      white: '#fff',
+      black: '#363636',
+    },
+
     baseBlack: '#363636',
     background: '#FFFFFF',
     button: '#EDEDED',
     textButton: '#676767',
+    text: 'rgba(255, 255, 255, 0.8)',
     textInfo: 'rgba(0, 0, 0, 0.6)',
+    textInfoSecond: 'rgba(255, 255, 255, 0.5)',
   },
   fonts: {
     black: 'Inter-Black',
