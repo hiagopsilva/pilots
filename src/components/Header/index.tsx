@@ -3,23 +3,15 @@ import {
   CalendarIcon,
   Container,
   ContainerDatePrimary,
-  ContainerInfoRace,
   ContainerNextDates,
-  ContainerRace,
   ContentLogoUser,
-  IconArrowRight,
   Logo,
-  MapImage,
-  TextCircuit,
-  TextDateRace,
   TextDateSecond,
   TextHello,
-  TextInfo,
-  TextLocaleRace,
   TextNextDate,
   WrapperDateSecond,
-  WrapperInfoRace,
 } from './styles'
+import RacerInfo from '../RacerInfo'
 
 type Props = {
   name?: string
@@ -33,22 +25,12 @@ const Header: React.FC<Props> = ({name = 'Ana Paula'}) => {
         <TextHello>Olá, {name}</TextHello>
       </ContentLogoUser>
 
-      <ContainerRace>
-        <TextInfo>Próxima corrida</TextInfo>
-
-        <MapImage />
-
-        <WrapperInfoRace>
-          <TextLocaleRace>GP do Bahrein</TextLocaleRace>
-
-          <TextDateRace>Data Sáb., 2 de Mar., 12:00</TextDateRace>
-
-          <ContainerInfoRace>
-            <IconArrowRight />
-            <TextCircuit>Circuito Internacional do Bahrein</TextCircuit>
-          </ContainerInfoRace>
-        </WrapperInfoRace>
-      </ContainerRace>
+      <RacerInfo
+        textRace="Proxima corrida"
+        textLocalRace="GP do Bahrein"
+        textDateRace="Data Sáb., 2 de Mar., 12:00"
+        textCircuitLabel="Circuito Internacional do Bahrein"
+      />
 
       <ContainerNextDates>
         <ContainerDatePrimary>

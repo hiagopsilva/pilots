@@ -11,6 +11,8 @@ declare module 'styled-components/native' {
       primary950: string
 
       neutro200: string
+      neutro300: string
+      neutro400: string
       neutro500: string
       neutro900: string
       neutro950: string

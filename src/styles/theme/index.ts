@@ -8,6 +8,8 @@ export default {
     primary950: '#1B3102',
 
     neutro200: '#E7E5E4',
+    neutro300: '#D6D3D1',
+    neutro400: '#A8A29E',
     neutro500: '#78716C',
     neutro900: '#1C1917',
     neutro950: '#0C0A09',
