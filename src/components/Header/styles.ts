@@ -59,10 +59,9 @@ export const ContainerDatePrimary = styled.View`
   margin-right: ${moderateScale(6)};
 `
 
-export const CalendarIcon = styled.View`
+export const CalendarIcon = styled.Image`
   width: 14px;
   height: 14px;
-  background-color: #fff;
 `
 
 export const TextNextDate = styled.Text`

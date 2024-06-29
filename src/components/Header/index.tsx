@@ -36,7 +36,7 @@ const Header: React.FC<Props> = ({name = 'Ana Paula'}) => {
 
       <ContainerNextDates>
         <ContainerDatePrimary>
-          <CalendarIcon />
+          <CalendarIcon source={require('../../assets/icons/calendar.png')} />
           <TextNextDate>Próximas dias</TextNextDate>
         </ContainerDatePrimary>
 
