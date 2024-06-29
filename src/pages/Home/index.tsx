@@ -1,19 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
-import {
-  ArrowRightIcon,
-  ButtonGoPilots,
-  Container,
-  Description,
-  Footer,
-  TextButtonGoPilots,
-  Title,
-  WrapperRace,
-} from './styles'
+import {Container, WrapperRace} from './styles'
 import Header from '../../components/Header'
 import RacerInfo from '../../components/RacerInfo'
 
 import Podium from '../../components/Podium'
+import Footer from '../../components/Footer'
 
 type Props = {
   navigation: any
@@ -56,19 +48,7 @@ const Home: React.FC<Props> = ({navigation}) => {
         <Podium pilots={pilots} />
       </WrapperRace>
 
-      <Footer>
-        <Title>História</Title>
-        <Description>
-          Conheça os pilotos de formula 1 que fizeram história em 1960
-        </Description>
-
-        <ButtonGoPilots onPress={() => navigation.navigate('Details')}>
-          <TextButtonGoPilots>Ver pilotos</TextButtonGoPilots>
-          <ArrowRightIcon
-            source={require('../../assets/icons/arrow-right.png')}
-          />
-        </ButtonGoPilots>
-      </Footer>
+      <Footer onPress={() => navigation.navigate('Details')} />
     </Container>
   )
 }
