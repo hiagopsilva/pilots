@@ -3,30 +3,24 @@ import React from 'react'
 import {
   ArrowRightIcon,
   ButtonGoPilots,
-  ChampionIcon,
   Container,
   Description,
   Footer,
-  Line,
-  NamePilot,
-  NameTeam,
-  Position,
   TextButtonGoPilots,
   Title,
-  WrapperPilots,
   WrapperRace,
 } from './styles'
 import Header from '../../components/Header'
 import RacerInfo from '../../components/RacerInfo'
 
-import {handleIconTrophy} from '../../utils/helpers'
+import Podium from '../../components/Podium'
 
 type Props = {
   navigation: any
 }
 
 const Home: React.FC<Props> = ({navigation}) => {
-  const pilots = [
+  const pilots: PodiumTypes.Item[] = [
     {
       position: 1,
       name: 'Max Verstappen',
@@ -43,6 +37,7 @@ const Home: React.FC<Props> = ({navigation}) => {
       team: 'Mercedes',
     },
   ]
+
   return (
     <Container>
       <Header name="Ana Paula" />
@@ -58,16 +53,7 @@ const Home: React.FC<Props> = ({navigation}) => {
           arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
         />
 
-        <WrapperPilots>
-          {pilots.map((pilot) => (
-            <Line key={pilot.position}>
-              <ChampionIcon source={handleIconTrophy(pilot.position)} />
-              <Position>{pilot.position}º</Position>
-              <NamePilot>{pilot.name}</NamePilot>
-              <NameTeam>{pilot.team}</NameTeam>
-            </Line>
-          ))}
-        </WrapperPilots>
+        <Podium pilots={pilots} />
       </WrapperRace>
 
       <Footer>
