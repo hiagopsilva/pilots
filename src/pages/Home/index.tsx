@@ -1,17 +1,22 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import {
+  ArrowRightIcon,
+  ButtonGoPilots,
   ChampionIcon,
   Container,
+  Description,
+  Footer,
   Line,
   NamePilot,
   NameTeam,
   Position,
-  Text,
+  TextButtonGoPilots,
+  Title,
   WrapperPilots,
   WrapperRace,
 } from './styles'
-import {TouchableOpacity} from 'react-native'
+import {Text, TouchableOpacity} from 'react-native'
 import Header from '../../components/Header'
 import RacerInfo from '../../components/RacerInfo'
 
@@ -62,11 +67,17 @@ const Home: React.FC<Props> = ({navigation}) => {
         </WrapperPilots>
       </WrapperRace>
 
-      <Text>Hello Pilots</Text>
+      <Footer>
+        <Title>História</Title>
+        <Description>
+          Conheça os pilotos de formula 1 que fizeram história em 1960
+        </Description>
 
-      <TouchableOpacity onPress={() => navigation.navigate('Details')}>
-        <Text>Go to Details</Text>
-      </TouchableOpacity>
+        <ButtonGoPilots onPress={() => navigation.navigate('Details')}>
+          <TextButtonGoPilots>Ver pilotos</TextButtonGoPilots>
+          <ArrowRightIcon />
+        </ButtonGoPilots>
+      </Footer>
     </Container>
   )
 }
