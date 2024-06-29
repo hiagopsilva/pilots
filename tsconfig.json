@@ -1,6 +1,9 @@
 {
+  "include": [
+    "types"
+  ],
   "extends": "@react-native/typescript-config/tsconfig.json",
   "files": [
-    "src/utils/types/styled.d.ts"
-  ]
+    "src/utils/types/styled.d.ts",
+  ]  
 }

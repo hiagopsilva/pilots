@@ -35,10 +35,9 @@ export const Line = styled.View`
   align-items: center;
 `
 
-export const ChampionIcon = styled.View`
+export const ChampionIcon = styled.Image`
   width: 20px;
   height: 20px;
-  background-color: red;
 `
 
 export const Position = styled.Text`
@@ -111,8 +110,7 @@ export const TextButtonGoPilots = styled.Text`
   color: ${(props) => props.theme.colors.primary200};
 `
 
-export const ArrowRightIcon = styled.View`
+export const ArrowRightIcon = styled.Image`
   width: 24px;
   height: 24px;
-  background-color: red;
 `

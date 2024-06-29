@@ -23,10 +23,16 @@ export const TextInfo = styled.Text<PropsIsSecond>`
       : props.theme.colors.textInfoSecond};
 `
 
-export const MapImage = styled.Image.attrs({})`
-  width: ${moderateScale(141)};
-  height: ${moderateScale(105)};
-  background-color: red;
+export const MapImage = styled.Image.attrs({
+  resizeMode: 'contain',
+})<PropsIsSecond>`
+  width: ${(props) =>
+    props.isSecond ? moderateScale(200) : moderateScale(141)};
+
+  height: ${(props) =>
+    props.isSecond ? moderateScale(52) : moderateScale(105)};
+
+  margin-top: ${(props) => (props.isSecond ? moderateScale(18) : 0)};
 `
 
 export const WrapperInfoRace = styled.View`
@@ -75,10 +81,9 @@ export const ContainerInfoRace = styled.View<PropsIsSecond>`
   padding: 2px 3px;
 `
 
-export const IconArrowRight = styled.View`
+export const IconArrowRight = styled.Image`
   width: ${moderateScale(14)};
   height: ${moderateScale(14)};
-  background-color: red;
   margin-right: ${moderateScale(6)};
 `
 

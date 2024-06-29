@@ -16,9 +16,10 @@ import {
   WrapperPilots,
   WrapperRace,
 } from './styles'
-import {Text, TouchableOpacity} from 'react-native'
 import Header from '../../components/Header'
 import RacerInfo from '../../components/RacerInfo'
+
+import {handleIconTrophy} from '../../utils/helpers'
 
 type Props = {
   navigation: any
@@ -53,12 +54,14 @@ const Home: React.FC<Props> = ({navigation}) => {
           textLocalRace="GP de Abu Dhabi"
           textDateRace="Data Sáb., 2 de Jan., De 2023 12:00"
           textCircuitLabel="Circuito de Yas Marina Circuit"
+          imageTraced={require('../../assets/images/car.png')}
+          arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
         />
 
         <WrapperPilots>
           {pilots.map((pilot) => (
             <Line key={pilot.position}>
-              <ChampionIcon />
+              <ChampionIcon source={handleIconTrophy(pilot.position)} />
               <Position>{pilot.position}º</Position>
               <NamePilot>{pilot.name}</NamePilot>
               <NameTeam>{pilot.team}</NameTeam>
@@ -75,7 +78,9 @@ const Home: React.FC<Props> = ({navigation}) => {
 
         <ButtonGoPilots onPress={() => navigation.navigate('Details')}>
           <TextButtonGoPilots>Ver pilotos</TextButtonGoPilots>
-          <ArrowRightIcon />
+          <ArrowRightIcon
+            source={require('../../assets/icons/arrow-right.png')}
+          />
         </ButtonGoPilots>
       </Footer>
     </Container>

@@ -10,12 +10,15 @@ import {
   TextLocaleRace,
   WrapperInfoRace,
 } from './styles'
+import {ImageSourcePropType} from 'react-native'
 
 type Props = {
   textRace: string
   textLocalRace: string
   textDateRace: string
   textCircuitLabel: string
+  imageTraced: ImageSourcePropType | undefined
+  arrowRightCrookedIcon: ImageSourcePropType | undefined
 
   isSecond?: boolean
 }
@@ -25,13 +28,15 @@ const RacerInfo: React.FC<Props> = ({
   textLocalRace,
   textDateRace,
   textCircuitLabel,
+  imageTraced,
+  arrowRightCrookedIcon,
   isSecond,
 }) => {
   return (
     <Container>
       <TextInfo isSecond={isSecond}>{textRace}</TextInfo>
 
-      <MapImage />
+      <MapImage isSecond={isSecond} source={imageTraced} />
 
       <WrapperInfoRace>
         <TextLocaleRace isSecond={isSecond}>{textLocalRace}</TextLocaleRace>
@@ -39,7 +44,7 @@ const RacerInfo: React.FC<Props> = ({
         <TextDateRace isSecond={isSecond}>{textDateRace}</TextDateRace>
 
         <ContainerInfoRace isSecond={isSecond}>
-          <IconArrowRight />
+          <IconArrowRight source={arrowRightCrookedIcon} />
           <TextCircuit>{textCircuitLabel}</TextCircuit>
         </ContainerInfoRace>
       </WrapperInfoRace>

@@ -3,6 +3,8 @@ import {moderateScale, verticalScale} from '../../styles'
 
 import {getStatusBarHeight} from 'react-native-iphone-screen-helper'
 
+import logo from '../../assets/images/logotipo.png'
+
 export const Container = styled.View`
   width: 100%;
 
@@ -20,13 +22,10 @@ export const ContentLogoUser = styled.View`
 `
 
 export const Logo = styled.Image.attrs({
-  source: {
-    uri: require('../../assets/images/logotipo.png'),
-  },
+  source: logo,
 })`
   width: ${moderateScale(37)};
   height: ${moderateScale(28)};
-  background-color: red;
 `
 
 export const TextHello = styled.Text`

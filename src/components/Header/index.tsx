@@ -30,6 +30,8 @@ const Header: React.FC<Props> = ({name = 'Ana Paula'}) => {
         textLocalRace="GP do Bahrein"
         textDateRace="Data Sáb., 2 de Mar., 12:00"
         textCircuitLabel="Circuito Internacional do Bahrein"
+        imageTraced={require('../../assets/images/traced.png')}
+        arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
       />
 
       <ContainerNextDates>
