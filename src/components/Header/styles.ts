@@ -2,18 +2,17 @@ import styled from 'styled-components/native'
 import {moderateScale, verticalScale} from '../../styles'
 
 import {getStatusBarHeight} from 'react-native-iphone-screen-helper'
-
-import logo from '../../assets/images/logotipo.png'
+import {Platform} from 'react-native'
 
 export const Container = styled.View`
   width: 100%;
 
-  height: ${verticalScale(290)};
+  min-height: ${verticalScale(220)};
 
   background-color: ${(props) => props.theme.colors.primary950};
 
   padding: 0 ${moderateScale(20)};
-  padding-top: ${getStatusBarHeight()}px;
+  padding-top: ${Platform.OS === 'ios' ? getStatusBarHeight() : 0}px;
 `
 
 export const ContentLogoUser = styled.View`
@@ -22,7 +21,7 @@ export const ContentLogoUser = styled.View`
 `
 
 export const Logo = styled.Image.attrs({
-  source: logo,
+  source: require('../../assets/images/logotipo.png'),
 })`
   width: ${moderateScale(37)};
   height: ${moderateScale(28)};
@@ -70,7 +69,6 @@ export const TextNextDate = styled.Text`
   font-size: 12px;
   font-family: 'Inter-Medium';
   color: ${(props) => props.theme.colors.base.white};
-  letter-spacing: -5%;
 
   padding: 0 ${moderateScale(6)};
 
@@ -99,7 +97,6 @@ export const TextDateSecond = styled.Text`
   font-size: 12px;
   font-family: 'Inter-Medium';
   color: ${(props) => props.theme.colors.base.white};
-  letter-spacing: -5%;
 
   padding: 0 ${moderateScale(3)};
 

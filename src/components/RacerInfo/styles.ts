@@ -51,7 +51,6 @@ export const TextLocaleRace = styled.Text<PropsIsSecond>`
     props.isSecond
       ? props.theme.colors.base.black
       : props.theme.colors.base.white};
-  letter-spacing: -2%;
 
   margin-top: ${moderateScale(8)};
 `
@@ -62,7 +61,6 @@ export const TextDateRace = styled.Text<PropsIsSecond>`
   font-family: 'Inter-SemiBold';
   color: ${(props) =>
     props.isSecond ? props.theme.colors.textInfo : props.theme.colors.text};
-  letter-spacing: -5%;
 `
 
 export const ContainerInfoRace = styled.View<PropsIsSecond>`
@@ -91,7 +89,6 @@ export const TextCircuit = styled.Text`
   font-size: 12px;
   font-family: 'Inter-Regular';
   color: ${(props) => props.theme.colors.base.black};
-  letter-spacing: -5%;
 
   padding: 0 ${moderateScale(3)};
 `

@@ -44,5 +44,4 @@ export const NameTeam = styled.Text`
   font-size: 14px;
   font-family: 'Inter-SemiBold';
   color: ${(props) => props.theme.colors.neutro400};
-  letter-spacing: -5%;
 `

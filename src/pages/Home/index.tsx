@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
-import {Container, WrapperRace} from './styles'
+import {Container, ContentHome, WrapperRace} from './styles'
 import Header from '../../components/Header'
 import RacerInfo from '../../components/RacerInfo'
 
@@ -32,23 +32,25 @@ const Home: React.FC<Props> = ({navigation}) => {
 
   return (
     <Container>
-      <Header name="Ana Paula" />
+      <ContentHome>
+        <Header name="Ana Paula" />
 
-      <WrapperRace>
-        <RacerInfo
-          isSecond
-          textRace="Última corrida"
-          textLocalRace="GP de Abu Dhabi"
-          textDateRace="Data Sáb., 2 de Jan., De 2023 12:00"
-          textCircuitLabel="Circuito de Yas Marina Circuit"
-          imageTraced={require('../../assets/images/car.png')}
-          arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
-        />
+        <WrapperRace>
+          <RacerInfo
+            isSecond
+            textRace="Última corrida"
+            textLocalRace="GP de Abu Dhabi"
+            textDateRace="Data Sáb., 2 de Jan., De 2023 12:00"
+            textCircuitLabel="Circuito de Yas Marina Circuit"
+            imageTraced={require('../../assets/images/car.png')}
+            arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
+          />
 
-        <Podium pilots={pilots} />
-      </WrapperRace>
+          <Podium pilots={pilots} />
+        </WrapperRace>
 
-      <Footer onPress={() => navigation.navigate('Details')} />
+        <Footer onPress={() => navigation.navigate('Details')} />
+      </ContentHome>
     </Container>
   )
 }
