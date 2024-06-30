@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/hiagopsilva/pilots/assets/47197695/9124b2f1-18e3-4136-b652-5be81e49cc18" width="200" height="200" style="border-radius: 50%;"
+  <img src="https://github.com/hiagopsilva/pilots/assets/47197695/9124b2f1-18e3-4136-b652-5be81e49cc18" width="200" height="200"
   >
   <h1>Pilots - Mobile</h1>
 
