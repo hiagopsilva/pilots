@@ -1,22 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
-import {
-  BirthPilot,
-  Container,
-  ContainerItem,
-  ContainerList,
-  ContentInfo,
-  ContentItem,
-  ContentList,
-  CountryImage,
-  Description,
-  NamePilot,
-  Title,
-  TitleList,
-} from './styles'
+import {Container, ContentInfo, Description, Title} from './styles'
 import HeaderDetails from '../../components/HeaderDetails'
+import ListPilots from '../../components/ListPilots'
 
-const Details: React.FC = () => {
-  const pilotos = [
+type Props = {
+  navigation: any
+}
+
+const Details: React.FC<Props> = ({navigation}) => {
+  const pilots = [
     {
       name: 'Carlo',
       date: '10 de Julho de 1932',
@@ -59,9 +52,13 @@ const Details: React.FC = () => {
     },
   ]
 
+  const goBack = () => {
+    navigation.goBack()
+  }
+
   return (
     <Container>
-      <HeaderDetails title="História" />
+      <HeaderDetails title="História" onPress={goBack} />
 
       <ContentInfo>
         <Title>História da F1</Title>
@@ -70,22 +67,7 @@ const Details: React.FC = () => {
           campeões inesquecíveis.
         </Description>
       </ContentInfo>
-
-      <ContainerList>
-        <TitleList>Pilotos</TitleList>
-
-        <ContentList>
-          {pilotos.map((piloto, index) => (
-            <ContainerItem key={index}>
-              <CountryImage source={piloto.flag} />
-              <ContentItem>
-                <NamePilot>{piloto.name}</NamePilot>
-                <BirthPilot>Nascido em {piloto.date}</BirthPilot>
-              </ContentItem>
-            </ContainerItem>
-          ))}
-        </ContentList>
-      </ContainerList>
+      <ListPilots pilots={pilots} />
     </Container>
   )
 }

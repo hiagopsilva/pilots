@@ -4,11 +4,12 @@ import {Container, ArrowLeftIcon, TitleDetails, ButtonGoBack} from './styles'
 
 type Props = {
   title: string
+  onPress: () => void
 }
-const HeaderDetails: React.FC<Props> = ({title}) => {
+const HeaderDetails: React.FC<Props> = ({title, onPress}) => {
   return (
     <Container>
-      <ButtonGoBack>
+      <ButtonGoBack onPress={onPress}>
         <ArrowLeftIcon source={require('../../assets/icons/arrow-left.png')} />
       </ButtonGoBack>
 
