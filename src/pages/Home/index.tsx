@@ -8,29 +8,13 @@ import Podium from '../../components/Podium'
 import Footer from '../../components/Footer'
 import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
 
+import {PILOTS_CONSTANTS} from '../../utils/constants'
+
 type Props = {
   navigation: any
 }
 
 const Home: React.FC<Props> = ({navigation}) => {
-  const pilots: PodiumTypes.Item[] = [
-    {
-      position: 1,
-      name: 'Max Verstappen',
-      team: 'Red Bull Racing',
-    },
-    {
-      position: 2,
-      name: 'Charles Leclerc',
-      team: 'Ferrari',
-    },
-    {
-      position: 3,
-      name: 'Lewis Hamilton',
-      team: 'Mercedes',
-    },
-  ]
-
   return (
     <Container>
       <ContentHome>
@@ -47,7 +31,7 @@ const Home: React.FC<Props> = ({navigation}) => {
             arrowRightCrookedIcon={<ArrowCrookedSVG />}
           />
 
-          <Podium pilots={pilots} />
+          <Podium pilots={PILOTS_CONSTANTS} />
         </WrapperRace>
 
         <Footer onPress={() => navigation.navigate('Details')} />
