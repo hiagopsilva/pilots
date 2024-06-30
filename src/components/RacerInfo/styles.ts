@@ -27,7 +27,7 @@ export const MapImage = styled.Image.attrs({
   resizeMode: 'cover',
 })<PropsIsSecond>`
   width: ${(props) =>
-    props.isSecond ? moderateScale(175) : moderateScale(141)};
+    props.isSecond ? moderateScale(162) : moderateScale(141)};
 
   height: ${(props) =>
     props.isSecond ? moderateScale(60) : moderateScale(105)};
@@ -71,7 +71,8 @@ export const ContainerInfoRace = styled.View<PropsIsSecond>`
   background-color: ${(props) =>
     props.isSecond ? props.theme.colors.button : props.theme.colors.primary200};
 
-  width: ${moderateScale(210)};
+  width: ${(props) =>
+    props.isSecond ? moderateScale(195) : moderateScale(210)};
   height: ${moderateScale(22)};
 
   border: none;
