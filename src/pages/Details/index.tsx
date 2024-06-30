@@ -6,6 +6,7 @@ import Loading from '../../components/Loading'
 import {RefreshControl} from 'react-native'
 import {PilotsTypes} from '../../utils/types/pilots'
 import {NavigationType} from '../../utils/types/navigation'
+import ServiceAPI from '../../services/api'
 
 type Props = {
   navigation: NavigationType
@@ -26,9 +27,7 @@ const Details: React.FC<Props> = ({navigation}) => {
     try {
       setLoading(true)
 
-      const response = await fetch('https://ergast.com/api/f1/drivers.json')
-
-      const data = await response.json()
+      const {response, data} = await ServiceAPI.getPilots()
 
       if (response.status === 200) {
         const filteredDrivers = data.MRData.DriverTable.Drivers.filter(
