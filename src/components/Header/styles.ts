@@ -3,6 +3,8 @@ import {moderateScale, verticalScale} from '../../styles'
 
 import {getStatusBarHeight} from 'react-native-iphone-screen-helper'
 import {Platform} from 'react-native'
+import LogoSVG from '../../assets/svg/Logo'
+import CalendarSVG from '../../assets/svg/CalendarSVG'
 
 export const Container = styled.View`
   width: 100%;
@@ -18,11 +20,11 @@ export const Container = styled.View`
 export const ContentLogoUser = styled.View`
   height: ${moderateScale(98)};
   justify-content: center;
+
+  flex-direction: column;
 `
 
-export const Logo = styled.Image.attrs({
-  source: require('../../assets/images/logotipo.png'),
-})`
+export const Logo = styled(LogoSVG)`
   width: ${moderateScale(37)};
   height: ${moderateScale(28)};
 `
@@ -59,7 +61,7 @@ export const ContainerDatePrimary = styled.View`
   margin-right: ${moderateScale(6)};
 `
 
-export const CalendarIcon = styled.Image`
+export const CalendarIcon = styled(CalendarSVG)`
   width: 14px;
   height: 14px;
 `
@@ -77,7 +79,7 @@ export const TextNextDate = styled.Text`
 export const WrapperDateSecond = styled.View`
   background-color: transparent;
 
-  width: ${moderateScale(81)};
+  width: ${moderateScale(83)};
   height: ${moderateScale(22)};
 
   border: 1px solid ${(props) => props.theme.colors.base.white};

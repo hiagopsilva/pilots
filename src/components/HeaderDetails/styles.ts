@@ -1,6 +1,7 @@
 import styled from 'styled-components/native'
 
 import {moderateScale} from '../../styles/index'
+import ArrowLeftSVG from '../../assets/svg/ArrowLeftSVG'
 
 export const Container = styled.View`
   flex-direction: row;
@@ -25,7 +26,7 @@ export const ButtonGoBack = styled.TouchableOpacity`
   border-radius: ${moderateScale(8)};
 `
 
-export const ArrowLeftIcon = styled.Image``
+export const ArrowLeftIcon = styled(ArrowLeftSVG)``
 
 export const TitleDetails = styled.Text`
   width: 100%;

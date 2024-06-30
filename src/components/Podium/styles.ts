@@ -19,11 +19,6 @@ export const Line = styled.View`
   align-items: center;
 `
 
-export const ChampionIcon = styled.Image`
-  width: 20px;
-  height: 20px;
-`
-
 export const Position = styled.Text`
   margin: 0 ${moderateScale(8)};
 

@@ -6,6 +6,7 @@ import RacerInfo from '../../components/RacerInfo'
 
 import Podium from '../../components/Podium'
 import Footer from '../../components/Footer'
+import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
 
 type Props = {
   navigation: any
@@ -43,7 +44,7 @@ const Home: React.FC<Props> = ({navigation}) => {
             textDateRace="Data Sáb., 2 de Jan., De 2023 12:00"
             textCircuitLabel="Circuito de Yas Marina Circuit"
             imageTraced={require('../../assets/images/car.png')}
-            arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
+            arrowRightCrookedIcon={<ArrowCrookedSVG />}
           />
 
           <Podium pilots={pilots} />
