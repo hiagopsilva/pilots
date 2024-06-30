@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import {Container, ContentHome, WrapperRace} from './styles'
 import Header from '../../components/Header'
