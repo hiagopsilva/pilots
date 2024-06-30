@@ -41,10 +41,18 @@ const Details: React.FC<Props> = ({navigation}) => {
       alert('Erro ao buscar os pilotos.')
     } finally {
       setLoading(false)
+      setRefreshing(false)
     }
   }
 
+  const onRefresh = () => {
+    setRefreshing(true)
+    handlePilots()
+  }
+
   useEffect(() => {
+    setLoading(true)
+
     handlePilots()
   }, [])
 
@@ -54,7 +62,7 @@ const Details: React.FC<Props> = ({navigation}) => {
 
       <Container
         refreshControl={
-          <RefreshControl refreshing={loading} onRefresh={handlePilots} />
+          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }>
         <HeaderDetails title="História" onPress={goBack} />
 
