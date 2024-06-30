@@ -2,6 +2,8 @@ import styled from 'styled-components/native'
 import {moderateScale} from '../../styles'
 import {getBottomSpace} from 'react-native-iphone-screen-helper'
 
+import ArrowRightSVG from '../../assets/svg/ArrowRightSVG'
+
 export const Container = styled.View`
   background-color: ${(props) => props.theme.colors.primary50};
 
@@ -49,7 +51,7 @@ export const TextButtonGoPilots = styled.Text`
   color: ${(props) => props.theme.colors.primary200};
 `
 
-export const ArrowRightIcon = styled.Image`
+export const ArrowRightIcon = styled(ArrowRightSVG)`
   width: 24px;
   height: 24px;
 `

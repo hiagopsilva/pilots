@@ -22,9 +22,7 @@ const Footer: React.FC<Props> = ({onPress}) => {
 
       <ButtonGoPilots onPress={onPress}>
         <TextButtonGoPilots>Ver pilotos</TextButtonGoPilots>
-        <ArrowRightIcon
-          source={require('../../assets/icons/arrow-right.png')}
-        />
+        <ArrowRightIcon />
       </ButtonGoPilots>
     </Container>
   )

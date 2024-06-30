@@ -2,7 +2,6 @@ import styled from 'styled-components/native'
 import {moderateScale} from '../../styles'
 
 export const WrapperPilots = styled.View`
-  width: 100%;
   height: ${moderateScale(100)};
 
   flex-direction: column;
@@ -17,11 +16,6 @@ export const WrapperPilots = styled.View`
 export const Line = styled.View`
   flex-direction: row;
   align-items: center;
-`
-
-export const ChampionIcon = styled.Image`
-  width: 20px;
-  height: 20px;
 `
 
 export const Position = styled.Text`

@@ -1,13 +1,8 @@
 import React from 'react'
-import {
-  ChampionIcon,
-  Line,
-  NamePilot,
-  NameTeam,
-  Position,
-  WrapperPilots,
-} from './styles'
-import {handleIconTrophy} from '../../utils/helpers'
+import {Line, NamePilot, NameTeam, Position, WrapperPilots} from './styles'
+
+import TrophySVG from '../../assets/svg/TrophySVG'
+import {handleColorTrophy} from '../../utils/helpers'
 
 type Props = {
   pilots: PodiumTypes.Item[]
@@ -18,7 +13,7 @@ const Podium: React.FC<Props> = ({pilots}) => {
     <WrapperPilots>
       {pilots.map((pilot) => (
         <Line key={pilot.position}>
-          <ChampionIcon source={handleIconTrophy(pilot.position)} />
+          <TrophySVG color={handleColorTrophy(pilot.position)} />
           <Position>{pilot.position}º</Position>
           <NamePilot>{pilot.name}</NamePilot>
           <NameTeam>{pilot.team}</NameTeam>

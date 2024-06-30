@@ -1,8 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import {
   Container,
   ContainerInfoRace,
-  IconArrowRight,
   MapImage,
   TextCircuit,
   TextDateRace,
@@ -17,8 +17,9 @@ type Props = {
   textLocalRace: string
   textDateRace: string
   textCircuitLabel: string
-  imageTraced: ImageSourcePropType | undefined
-  arrowRightCrookedIcon: ImageSourcePropType | undefined
+  imageTraced?: ImageSourcePropType | React.ReactNode | undefined
+  imageTracedSvg?: any
+  arrowRightCrookedIcon: React.ReactNode
 
   isSecond?: boolean
 }
@@ -29,6 +30,7 @@ const RacerInfo: React.FC<Props> = ({
   textDateRace,
   textCircuitLabel,
   imageTraced,
+  imageTracedSvg: ImageTracedSvg,
   arrowRightCrookedIcon,
   isSecond,
 }) => {
@@ -36,7 +38,14 @@ const RacerInfo: React.FC<Props> = ({
     <Container>
       <TextInfo isSecond={isSecond}>{textRace}</TextInfo>
 
-      <MapImage isSecond={isSecond} source={imageTraced} />
+      {imageTraced && (
+        <MapImage
+          isSecond={isSecond}
+          source={imageTraced as ImageSourcePropType | undefined}
+        />
+      )}
+
+      {ImageTracedSvg && <>{ImageTracedSvg}</>}
 
       <WrapperInfoRace>
         <TextLocaleRace isSecond={isSecond}>{textLocalRace}</TextLocaleRace>
@@ -44,7 +53,7 @@ const RacerInfo: React.FC<Props> = ({
         <TextDateRace isSecond={isSecond}>{textDateRace}</TextDateRace>
 
         <ContainerInfoRace isSecond={isSecond}>
-          <IconArrowRight source={arrowRightCrookedIcon} />
+          {arrowRightCrookedIcon}
           <TextCircuit>{textCircuitLabel}</TextCircuit>
         </ContainerInfoRace>
       </WrapperInfoRace>

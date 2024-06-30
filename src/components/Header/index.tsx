@@ -13,6 +13,9 @@ import {
 } from './styles'
 import RacerInfo from '../RacerInfo'
 
+import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
+import TracedSVG from '../../assets/svg/TracedSVG'
+
 type Props = {
   name?: string
 }
@@ -30,13 +33,13 @@ const Header: React.FC<Props> = ({name = 'Ana Paula'}) => {
         textLocalRace="GP do Bahrein"
         textDateRace="Data Sáb., 2 de Mar., 12:00"
         textCircuitLabel="Circuito Internacional do Bahrein"
-        imageTraced={require('../../assets/images/traced.png')}
-        arrowRightCrookedIcon={require('../../assets/icons/arrow-croocked-icon.png')}
+        imageTracedSvg={<TracedSVG />}
+        arrowRightCrookedIcon={<ArrowCrookedSVG />}
       />
 
       <ContainerNextDates>
         <ContainerDatePrimary>
-          <CalendarIcon source={require('../../assets/icons/calendar.png')} />
+          <CalendarIcon />
           <TextNextDate>Próximas dias</TextNextDate>
         </ContainerDatePrimary>
 

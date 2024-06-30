@@ -24,15 +24,15 @@ export const TextInfo = styled.Text<PropsIsSecond>`
 `
 
 export const MapImage = styled.Image.attrs({
-  resizeMode: 'contain',
+  resizeMode: 'cover',
 })<PropsIsSecond>`
   width: ${(props) =>
-    props.isSecond ? moderateScale(200) : moderateScale(141)};
+    props.isSecond ? moderateScale(175) : moderateScale(141)};
 
   height: ${(props) =>
-    props.isSecond ? moderateScale(52) : moderateScale(105)};
+    props.isSecond ? moderateScale(60) : moderateScale(105)};
 
-  margin-top: ${(props) => (props.isSecond ? moderateScale(18) : 0)};
+  margin-top: ${(props) => (props.isSecond ? moderateScale(12) : 0)};
 `
 
 export const WrapperInfoRace = styled.View`
