@@ -63,3 +63,35 @@ npm run ios
 yarn ios
 ```
 
+### Libs utilizadas
+- React Navigation (`react-navigation`): [link documentação](https://reactnavigation.org)
+- Styled components (`styled-components`): [link documentação](https://styled-components.com)
+- Date fns (`date-fns`): [link documentação](https://date-fns.org)
+- React Native iphone screen helper (`react-native-iphone-screen-helper`): [link documentação](https://www.npmjs.com/package/react-native-iphone-screen-helper)
+- React Native size matters (`react-native-size-matters`): [link documentação](https://github.com/nirsky/react-native-size-matters)
+- React Native Svg (`react-native-svg`): [link documentação](https://www.npmjs.com/package/react-native-svg)
+
+---
+
+# Estrutura de pastas
+
+## Assets:
+>Fontes, svg e imagens da aplicação.
+
+## Components
+> Components da aplicação.
+
+## Pages
+> Paginas da aplicação.
+
+## Routes
+> Rotas da aplicação.
+
+## Services:
+> Requisições API.
+
+## Styles
+> Theme provider do projeto.
+
+## Utils:
+> Utilizado para: (types, constants e helpers)
