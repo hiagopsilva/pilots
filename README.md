@@ -1,6 +1,7 @@
 <div align="center">
-  <img src="https://github.com/hiagopsilva/pilots/assets/47197695/9124b2f1-18e3-4136-b652-5be81e49cc18" width="200" height="200"
+  <img src="https://github.com/hiagopsilva/pilots/assets/47197695/67a514db-9d06-4586-bd0f-9bedd2c5ef00" width="200" height="200"
   >
+  
   <h1>Pilots - Mobile</h1>
 
   <span>Este é o projeto mobile Pilots desenvolvido com React Native (Android e iOS).</span>
