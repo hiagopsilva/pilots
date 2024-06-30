@@ -3,7 +3,7 @@
   <h1>Pilots - Mobile</h1>
 </div>
 
-Este é o projeto mobile Pilots desenvolvido com React Native.
+Este é o projeto mobile Pilots desenvolvido com React Native (Android e iOS).
 
 ## Demonstração
 
