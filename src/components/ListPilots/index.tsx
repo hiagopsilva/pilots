@@ -9,9 +9,8 @@ import {
   NamePilot,
   TitleList,
 } from './styles'
-import {format, parseISO} from 'date-fns'
-import {ptBR} from 'date-fns/locale'
 import ListCountry from '../ListCountry'
+import {formatDate} from '../../utils/helpers'
 
 type Props = {
   pilots?: PilotsTypes.Driver[]
@@ -22,11 +21,6 @@ const ListPilots: React.FC<Props> = ({
   pilots,
   messageNoData = 'Nenhum piloto encontrado.',
 }) => {
-  const formatDate = (dateString) => {
-    const date = parseISO(dateString)
-    return format(date, "dd 'de' MMMM 'de' yyyy", {locale: ptBR})
-  }
-
   return (
     <ContainerList>
       <TitleList>Pilotos</TitleList>
