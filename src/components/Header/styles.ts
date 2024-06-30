@@ -79,7 +79,7 @@ export const TextNextDate = styled.Text`
 export const WrapperDateSecond = styled.View`
   background-color: transparent;
 
-  width: ${moderateScale(88)};
+  min-width: ${moderateScale(75)};
   height: ${moderateScale(22)};
 
   border: 1px solid ${(props) => props.theme.colors.base.white};
