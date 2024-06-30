@@ -1,13 +1,15 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, {useEffect, useState} from 'react'
 import {Container, ContentInfo, Description, Title} from './styles'
 import HeaderDetails from '../../components/HeaderDetails'
 import ListPilots from '../../components/ListPilots'
 import Loading from '../../components/Loading'
 import {RefreshControl} from 'react-native'
+import {PilotsTypes} from '../../utils/types/pilots'
+import {NavigationType} from '../../utils/types/navigation'
+import ServiceAPI from '../../services/api'
 
 type Props = {
-  navigation: any
+  navigation: NavigationType
 }
 
 const Details: React.FC<Props> = ({navigation}) => {
@@ -25,9 +27,7 @@ const Details: React.FC<Props> = ({navigation}) => {
     try {
       setLoading(true)
 
-      const response = await fetch('https://ergast.com/api/f1/drivers.json')
-
-      const data = await response.json()
+      const {response, data} = await ServiceAPI.getPilots()
 
       if (response.status === 200) {
         const filteredDrivers = data.MRData.DriverTable.Drivers.filter(
@@ -73,6 +73,7 @@ const Details: React.FC<Props> = ({navigation}) => {
             campeões inesquecíveis.
           </Description>
         </ContentInfo>
+
         <ListPilots pilots={pilots} />
       </Container>
     </>

@@ -15,7 +15,7 @@ export const Container = styled.View`
 `
 
 export const TextInfo = styled.Text<PropsIsSecond>`
-  font-size: 12px;
+  font-size: ${moderateScale(12)};
   font-family: 'Inter-SemiBold';
   color: ${(props) =>
     props.isSecond
@@ -27,7 +27,7 @@ export const MapImage = styled.Image.attrs({
   resizeMode: 'cover',
 })<PropsIsSecond>`
   width: ${(props) =>
-    props.isSecond ? moderateScale(175) : moderateScale(141)};
+    props.isSecond ? moderateScale(162) : moderateScale(141)};
 
   height: ${(props) =>
     props.isSecond ? moderateScale(60) : moderateScale(105)};
@@ -44,9 +44,9 @@ export const WrapperInfoRace = styled.View`
 `
 
 export const TextLocaleRace = styled.Text<PropsIsSecond>`
-  font-size: 18px;
+  font-size: ${moderateScale(18)};
   font-family: 'Inter-Bold';
-  line-height: 28px;
+  line-height: ${moderateScale(28)};
   color: ${(props) =>
     props.isSecond
       ? props.theme.colors.base.black
@@ -57,10 +57,18 @@ export const TextLocaleRace = styled.Text<PropsIsSecond>`
 
 export const TextDateRace = styled.Text<PropsIsSecond>`
   margin-top: ${moderateScale(18)};
-  font-size: 14px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-SemiBold';
   color: ${(props) =>
     props.isSecond ? props.theme.colors.textInfo : props.theme.colors.text};
+
+  text-transform: capitalize;
+`
+
+export const LabelDate = styled.Text<PropsIsSecond>`
+  font-size: ${moderateScale(14)};
+  font-family: 'Inter-SemiBold';
+  color: ${(props) => props.theme.colors.base.black};
 `
 
 export const ContainerInfoRace = styled.View<PropsIsSecond>`
@@ -71,12 +79,13 @@ export const ContainerInfoRace = styled.View<PropsIsSecond>`
   background-color: ${(props) =>
     props.isSecond ? props.theme.colors.button : props.theme.colors.primary200};
 
-  width: ${moderateScale(210)};
+  width: ${(props) =>
+    props.isSecond ? moderateScale(195) : moderateScale(210)};
   height: ${moderateScale(22)};
 
   border: none;
-  border-radius: 6px;
-  padding: 2px 3px;
+  border-radius: ${moderateScale(6)};
+  padding: ${moderateScale(2)} ${moderateScale(3)};
 `
 
 export const IconArrowRight = styled.Image`
@@ -86,7 +95,7 @@ export const IconArrowRight = styled.Image`
 `
 
 export const TextCircuit = styled.Text`
-  font-size: 12px;
+  font-size: ${moderateScale(12)};
   font-family: 'Inter-Regular';
   color: ${(props) => props.theme.colors.base.black};
 

@@ -7,7 +7,7 @@ type Props = {
   height?: number
 }
 
-const FranceSVG: FC<Props> = ({width = 24, height = 24, ...rest}) => {
+const GermanySVG: FC<Props> = ({width = 24, height = 24, ...rest}) => {
   return (
     <Svg
       {...rest}
@@ -38,4 +38,4 @@ const FranceSVG: FC<Props> = ({width = 24, height = 24, ...rest}) => {
   )
 }
 
-export default FranceSVG
+export default GermanySVG

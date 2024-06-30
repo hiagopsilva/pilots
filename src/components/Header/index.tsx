@@ -15,6 +15,8 @@ import RacerInfo from '../RacerInfo'
 
 import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
 import TracedSVG from '../../assets/svg/TracedSVG'
+import {formatDate} from '../../utils/helpers'
+import {FORMAT_DATE} from '../../utils/constants'
 
 type Props = {
   name?: string
@@ -31,7 +33,10 @@ const Header: React.FC<Props> = ({name = 'Ana Paula'}) => {
       <RacerInfo
         textRace="Proxima corrida"
         textLocalRace="GP do Bahrein"
-        textDateRace="Data Sáb., 2 de Mar., 12:00"
+        textDateRace={`Data ${formatDate(
+          new Date('2023-03-02T12:00:00'),
+          FORMAT_DATE.LONG_DATE,
+        )}`}
         textCircuitLabel="Circuito Internacional do Bahrein"
         imageTracedSvg={<TracedSVG />}
         arrowRightCrookedIcon={<ArrowCrookedSVG />}
@@ -44,11 +49,23 @@ const Header: React.FC<Props> = ({name = 'Ana Paula'}) => {
         </ContainerDatePrimary>
 
         <WrapperDateSecond>
-          <TextDateSecond>Dia 9, 14:00</TextDateSecond>
+          <TextDateSecond>
+            Dia{' '}
+            {formatDate(
+              new Date('2023-03-09T14:00:00'),
+              FORMAT_DATE.SMALL_DATE,
+            )}
+          </TextDateSecond>
         </WrapperDateSecond>
 
         <WrapperDateSecond>
-          <TextDateSecond>Dia 24, 14:00</TextDateSecond>
+          <TextDateSecond>
+            Dia{' '}
+            {formatDate(
+              new Date('2023-03-24T14:00:00'),
+              FORMAT_DATE.SMALL_DATE,
+            )}
+          </TextDateSecond>
         </WrapperDateSecond>
       </ContainerNextDates>
     </Container>

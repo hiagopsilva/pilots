@@ -1,5 +1,6 @@
 import {format, parseISO} from 'date-fns'
 import {ptBR} from 'date-fns/locale'
+import {FORMAT_DATE} from './constants'
 
 export const handleColorTrophy = (position: number) => {
   if (position === 1) {
@@ -11,6 +12,11 @@ export const handleColorTrophy = (position: number) => {
   return '#773C17'
 }
 
-export const formatDate = (dateString: string) => {
-  return format(parseISO(dateString), "dd 'de' MMMM 'de' yyyy", {locale: ptBR})
+export const formatDate = (
+  date: Date | string,
+  formatDate = FORMAT_DATE.LONG_DATE_WITH_YEAR,
+) => {
+  const dateFormatted = typeof date === 'string' ? parseISO(date) : date
+
+  return format(dateFormatted, formatDate, {locale: ptBR})
 }

@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import {Container, ContentHome, WrapperRace} from './styles'
 import Header from '../../components/Header'
@@ -8,29 +7,15 @@ import Podium from '../../components/Podium'
 import Footer from '../../components/Footer'
 import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
 
+import {PILOTS_CONSTANTS} from '../../utils/constants'
+import {formatDate} from '../../utils/helpers'
+import {NavigationType} from '../../utils/types/navigation'
+
 type Props = {
-  navigation: any
+  navigation: NavigationType
 }
 
 const Home: React.FC<Props> = ({navigation}) => {
-  const pilots: PodiumTypes.Item[] = [
-    {
-      position: 1,
-      name: 'Max Verstappen',
-      team: 'Red Bull Racing',
-    },
-    {
-      position: 2,
-      name: 'Charles Leclerc',
-      team: 'Ferrari',
-    },
-    {
-      position: 3,
-      name: 'Lewis Hamilton',
-      team: 'Mercedes',
-    },
-  ]
-
   return (
     <Container>
       <ContentHome>
@@ -41,13 +26,14 @@ const Home: React.FC<Props> = ({navigation}) => {
             isSecond
             textRace="Última corrida"
             textLocalRace="GP de Abu Dhabi"
-            textDateRace="Data Sáb., 2 de Jan., De 2023 12:00"
+            labelDate="Data"
+            textDateRace={formatDate(new Date('2023-01-02T12:00:00'))}
             textCircuitLabel="Circuito de Yas Marina Circuit"
             imageTraced={require('../../assets/images/car.png')}
             arrowRightCrookedIcon={<ArrowCrookedSVG />}
           />
 
-          <Podium pilots={pilots} />
+          <Podium pilots={PILOTS_CONSTANTS} />
         </WrapperRace>
 
         <Footer onPress={() => navigation.navigate('Details')} />

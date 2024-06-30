@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import React from 'react'
 import {
   Container,
   ContainerInfoRace,
+  LabelDate,
   MapImage,
   TextCircuit,
   TextDateRace,
@@ -18,8 +18,9 @@ type Props = {
   textDateRace: string
   textCircuitLabel: string
   imageTraced?: ImageSourcePropType | React.ReactNode | undefined
-  imageTracedSvg?: any
+  imageTracedSvg?: React.ReactNode
   arrowRightCrookedIcon: React.ReactNode
+  labelDate?: string
 
   isSecond?: boolean
 }
@@ -32,6 +33,7 @@ const RacerInfo: React.FC<Props> = ({
   imageTraced,
   imageTracedSvg: ImageTracedSvg,
   arrowRightCrookedIcon,
+  labelDate,
   isSecond,
 }) => {
   return (
@@ -50,7 +52,10 @@ const RacerInfo: React.FC<Props> = ({
       <WrapperInfoRace>
         <TextLocaleRace isSecond={isSecond}>{textLocalRace}</TextLocaleRace>
 
-        <TextDateRace isSecond={isSecond}>{textDateRace}</TextDateRace>
+        <TextDateRace isSecond={isSecond}>
+          {labelDate && <LabelDate>{labelDate} </LabelDate>}
+          {textDateRace}
+        </TextDateRace>
 
         <ContainerInfoRace isSecond={isSecond}>
           {arrowRightCrookedIcon}

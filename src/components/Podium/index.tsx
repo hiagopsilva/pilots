@@ -3,6 +3,7 @@ import {Line, NamePilot, NameTeam, Position, WrapperPilots} from './styles'
 
 import TrophySVG from '../../assets/svg/TrophySVG'
 import {handleColorTrophy} from '../../utils/helpers'
+import {PodiumTypes} from '../../utils/types/podium'
 
 type Props = {
   pilots: PodiumTypes.Item[]

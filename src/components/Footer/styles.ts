@@ -13,18 +13,18 @@ export const Container = styled.View`
   bottom: 0;
   margin-top: auto;
 
-  padding: 20px;
+  padding: ${moderateScale(20)};
   padding-bottom: ${getBottomSpace()}px;
 `
 export const Title = styled.Text`
-  font-size: 12px;
+  font-size: ${moderateScale(12)};
   font-family: 'Inter-SemiBold';
   color: ${(props) => props.theme.colors.textInfo};
 `
 
 export const Description = styled.Text`
   margin-top: ${moderateScale(16)};
-  font-size: 16px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-Bold';
   color: ${(props) => props.theme.colors.primary950};
 `
@@ -33,7 +33,7 @@ export const ButtonGoPilots = styled.Pressable`
   margin-top: ${moderateScale(16)};
 
   background-color: ${(props) => props.theme.colors.neutro900};
-  padding: 16px;
+  padding: ${moderateScale(16)};
 
   width: 100%;
   height: ${moderateScale(56)};
@@ -42,16 +42,16 @@ export const ButtonGoPilots = styled.Pressable`
   align-items: center;
   flex-direction: row;
 
-  border-radius: 12px;
+  border-radius: ${moderateScale(12)};
 `
 
 export const TextButtonGoPilots = styled.Text`
-  font-size: 14px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-Bold';
   color: ${(props) => props.theme.colors.primary200};
 `
 
 export const ArrowRightIcon = styled(ArrowRightSVG)`
-  width: 24px;
-  height: 24px;
+  width: ${moderateScale(24)};
+  height: ${moderateScale(24)};
 `
