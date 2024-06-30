@@ -12,6 +12,7 @@ import {
 import ListCountry from '../ListCountry'
 import {formatDate} from '../../utils/helpers'
 import {FORMAT_DATE} from '../../utils/constants'
+import {PilotsTypes} from '../../utils/types/pilots'
 
 type Props = {
   pilots?: PilotsTypes.Driver[]

@@ -1,5 +1,5 @@
-declare namespace PilotsTypes {
-  type Driver = {
+export namespace PilotsTypes {
+  export type Driver = {
     driverId: string
     url: string
     givenName: string
@@ -10,15 +10,15 @@ declare namespace PilotsTypes {
     code?: string
   }
 
-  type DriverTable = {
+  export type DriverTable = {
     Drivers: Driver[]
   }
 
-  type MRData = {
+  export type MRData = {
     DriverTable: DriverTable
   }
 
-  type Root = {
+  export type Root = {
     MRData: MRData
   }
 }

@@ -19,7 +19,7 @@ type Props = {
   textDateRace: string
   textCircuitLabel: string
   imageTraced?: ImageSourcePropType | React.ReactNode | undefined
-  imageTracedSvg?: any
+  imageTracedSvg?: React.ReactNode
   arrowRightCrookedIcon: React.ReactNode
   labelDate?: string
 

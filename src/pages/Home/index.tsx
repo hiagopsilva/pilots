@@ -10,9 +10,10 @@ import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
 
 import {PILOTS_CONSTANTS} from '../../utils/constants'
 import {formatDate} from '../../utils/helpers'
+import {NavigationType} from '../../utils/types/navigation'
 
 type Props = {
-  navigation: any
+  navigation: NavigationType
 }
 
 const Home: React.FC<Props> = ({navigation}) => {

@@ -1,3 +1,5 @@
+import {PodiumTypes} from '../utils/types/podium'
+
 export const PILOTS_CONSTANTS: PodiumTypes.Item[] = [
   {
     position: 1,

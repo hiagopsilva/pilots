@@ -5,9 +5,11 @@ import HeaderDetails from '../../components/HeaderDetails'
 import ListPilots from '../../components/ListPilots'
 import Loading from '../../components/Loading'
 import {RefreshControl} from 'react-native'
+import {PilotsTypes} from '../../utils/types/pilots'
+import {NavigationType} from '../../utils/types/navigation'
 
 type Props = {
-  navigation: any
+  navigation: NavigationType
 }
 
 const Details: React.FC<Props> = ({navigation}) => {
