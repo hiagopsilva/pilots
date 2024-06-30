@@ -43,7 +43,6 @@ const ListPilots: React.FC<Props> = ({
             <ContainerItem key={index}>
               <ListCountry nationality={pilot.nationality} />
 
-              {/* <CountryImage source={pilot.flag} /> */}
               <ContentItem>
                 <NamePilot>{pilot.givenName}</NamePilot>
                 <BirthPilot>
