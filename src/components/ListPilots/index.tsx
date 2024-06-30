@@ -12,11 +12,41 @@ import {
 } from './styles'
 import {format, parseISO} from 'date-fns'
 import {ptBR} from 'date-fns/locale'
+import CountryFlag from 'react-native-country-flags'
+import ListCountry from '../ListCountry'
 
 type Props = {
   pilots?: PilotsTypes.Driver[]
   messageNoData?: string
 }
+
+const countryCodes = {
+  British: 'GB',
+  American: 'US',
+  Brazilian: 'BR',
+  Dutch: 'NL',
+  Thai: 'TH',
+  Italian: 'IT',
+  'New Zealander': 'NZ',
+  French: 'FR',
+  German: 'DE',
+  Spanish: 'ES',
+  Swedish: 'SE',
+  Australian: 'AU',
+  Canadian: 'CA',
+  Finnish: 'FI',
+  Japanese: 'JP',
+  Austrian: 'AT',
+  Danish: 'DK',
+  Belgian: 'BE',
+  Russian: 'RU',
+  Chinese: 'CN',
+  Indian: 'IN',
+  Mexican: 'MX',
+  Portuguese: 'PT',
+  SouthAfrican: 'ZA',
+}
+
 const ListPilots: React.FC<Props> = ({
   pilots,
   messageNoData = 'Nenhum piloto encontrado.',
@@ -38,13 +68,15 @@ const ListPilots: React.FC<Props> = ({
 
       {pilots && pilots.length > 0 && (
         <ContentList>
-          {pilots.map((piloto, index) => (
+          {pilots.map((pilot, index) => (
             <ContainerItem key={index}>
-              {/* <CountryImage source={piloto.flag} /> */}
+              <ListCountry nationality={pilot.nationality} />
+
+              {/* <CountryImage source={pilot.flag} /> */}
               <ContentItem>
-                <NamePilot>{piloto.givenName}</NamePilot>
+                <NamePilot>{pilot.givenName}</NamePilot>
                 <BirthPilot>
-                  Nascido em {formatDate(piloto.dateOfBirth)}
+                  Nascido em {formatDate(pilot.dateOfBirth)}
                 </BirthPilot>
               </ContentItem>
             </ContainerItem>

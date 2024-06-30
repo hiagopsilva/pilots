@@ -3,8 +3,6 @@ import React, {useEffect, useState} from 'react'
 import {Container, ContentInfo, Description, Title} from './styles'
 import HeaderDetails from '../../components/HeaderDetails'
 import ListPilots from '../../components/ListPilots'
-import {format, parseISO} from 'date-fns'
-import {ptBR} from 'date-fns/locale'
 
 type Props = {
   navigation: any
@@ -32,11 +30,6 @@ const Details: React.FC<Props> = ({navigation}) => {
 
       setPilots(filteredDrivers)
     }
-  }
-
-  const formatDate = (dateString) => {
-    const date = parseISO(dateString)
-    return format(date, "dd 'de' MMMM 'de' yyyy", {locale: ptBR})
   }
 
   useEffect(() => {
