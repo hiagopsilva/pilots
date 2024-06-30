@@ -9,7 +9,7 @@ Este é o projeto mobile Pilots desenvolvido com React Native.
 <img width="400" src="https://github.com/hiagopsilva/pilots/assets/47197695/ea19f0ce-dc3a-4c41-9ddf-0cbd272d2000" >
 
 ### Android
-<img width="400" src="https://github.com/hiagopsilva/pilots/assets/47197695/627fcf4c-cab7-49fa-bf45-0b5adad14eff" >
+<img width="400" src="https://github.com/hiagopsilva/pilots/assets/47197695/9fbdc0a8-ed6b-4ff3-a06a-11e6e4198293" >
 <img width="400" src="https://github.com/hiagopsilva/pilots/assets/47197695/5aadae1f-7ecd-4103-abc7-43f70b21458c" >
 
 > Este README fornecerá as informações necessárias para configurar, instalar e iniciar a aplicação tanto no ambiente de desenvolvimento quanto nos simuladores ou emuladores para iOS e Android.
