@@ -15,7 +15,7 @@ export const Container = styled.ScrollView.attrs({
   flex: 1;
   padding: ${moderateScale(20)};
   padding-top: ${Platform.OS === 'ios'
-    ? getStatusBarHeight()
+    ? getStatusBarHeight() + 'px'
     : moderateScale(20)};
 `
 
