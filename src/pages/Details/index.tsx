@@ -73,6 +73,7 @@ const Details: React.FC<Props> = ({navigation}) => {
             campeões inesquecíveis.
           </Description>
         </ContentInfo>
+
         <ListPilots pilots={pilots} />
       </Container>
     </>

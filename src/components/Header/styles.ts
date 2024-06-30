@@ -30,11 +30,11 @@ export const Logo = styled(LogoSVG)`
 `
 
 export const TextHello = styled.Text`
-  font-size: 20px;
+  font-size: ${moderateScale(20)};
   font-family: 'Inter-Bold';
   color: ${(props) => props.theme.colors.primary50};
 
-  margin-top: ${moderateScale(8)};
+  margin-top: ${moderateScale(4)};
 `
 
 export const ContainerNextDates = styled.View`
@@ -48,7 +48,7 @@ export const ContainerNextDates = styled.View`
 export const ContainerDatePrimary = styled.View`
   background-color: ${(props) => props.theme.colors.neutro950};
 
-  width: ${moderateScale(104)};
+  width: ${moderateScale(106)};
   height: ${moderateScale(22)};
 
   border-radius: ${moderateScale(6)};
@@ -62,16 +62,16 @@ export const ContainerDatePrimary = styled.View`
 `
 
 export const CalendarIcon = styled(CalendarSVG)`
-  width: 14px;
-  height: 14px;
+  width: ${moderateScale(14)};
+  height: ${moderateScale(14)};
 `
 
 export const TextNextDate = styled.Text`
-  font-size: 12px;
+  font-size: ${moderateScale(12)};
   font-family: 'Inter-Medium';
   color: ${(props) => props.theme.colors.base.white};
 
-  padding: 0 ${moderateScale(6)};
+  padding: 0 ${moderateScale(3)};
 
   text-align: center;
 `
@@ -79,7 +79,7 @@ export const TextNextDate = styled.Text`
 export const WrapperDateSecond = styled.View`
   background-color: transparent;
 
-  width: ${moderateScale(83)};
+  width: ${moderateScale(88)};
   height: ${moderateScale(22)};
 
   border: 1px solid ${(props) => props.theme.colors.base.white};
@@ -95,7 +95,7 @@ export const WrapperDateSecond = styled.View`
 `
 
 export const TextDateSecond = styled.Text`
-  font-size: 12px;
+  font-size: ${moderateScale(12)};
   font-family: 'Inter-Medium';
   color: ${(props) => props.theme.colors.base.white};
 

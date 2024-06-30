@@ -10,7 +10,7 @@ export const WrapperPilots = styled.View`
 
   border: 1px solid ${(props) => props.theme.colors.neutro300};
   border-radius: ${moderateScale(12)};
-  padding: 12px;
+  padding: ${moderateScale(12)};
 `
 
 export const Line = styled.View`
@@ -21,13 +21,13 @@ export const Line = styled.View`
 export const Position = styled.Text`
   margin: 0 ${moderateScale(8)};
 
-  font-size: 14px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-SemiBold';
   color: ${(props) => props.theme.colors.neutro950};
 `
 
 export const NamePilot = styled.Text`
-  font-size: 14px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-SemiBold';
   color: ${(props) => props.theme.colors.base.black};
 `
@@ -35,7 +35,7 @@ export const NamePilot = styled.Text`
 export const NameTeam = styled.Text`
   margin-left: ${moderateScale(8)};
 
-  font-size: 14px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-SemiBold';
   color: ${(props) => props.theme.colors.neutro400};
 `

@@ -13,27 +13,31 @@ export const Container = styled.ScrollView.attrs({
   },
 })`
   flex: 1;
-  padding: 20px;
-  padding-top: ${Platform.OS === 'ios' ? getStatusBarHeight() : 20}px;
+  padding: ${moderateScale(20)};
+  padding-top: ${Platform.OS === 'ios'
+    ? getStatusBarHeight()
+    : moderateScale(20)};
 `
 
 export const ContentInfo = styled.View`
   width: 100%;
-  height: ${moderateScale(118)};
-  padding: 20px 0;
+  height: ${moderateScale(130)};
+  padding: ${moderateScale(20)} 0;
+
+  margin-bottom: ${moderateScale(32)};
 `
 
 export const Title = styled.Text`
-  font-size: 20px;
+  font-size: ${moderateScale(20)};
   font-family: 'Inter-Bold';
   color: ${(props) => props.theme.colors.neutro900};
   margin-bottom: ${moderateScale(8)};
 `
 
 export const Description = styled.Text`
-  font-size: 16px;
+  font-size: ${moderateScale(16)};
   font-family: 'Inter-SemiBold';
   color: ${(props) => props.theme.colors.neutro500};
 
-  line-height: 24px;
+  line-height: ${moderateScale(24)};
 `

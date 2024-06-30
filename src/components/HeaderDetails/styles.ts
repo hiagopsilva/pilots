@@ -32,7 +32,7 @@ export const TitleDetails = styled.Text`
   width: 100%;
   text-align: center;
 
-  font-size: 14px;
+  font-size: ${moderateScale(14)};
   font-family: 'Inter-Bold';
   color: ${(props) => props.theme.colors.neutro900};
 `
