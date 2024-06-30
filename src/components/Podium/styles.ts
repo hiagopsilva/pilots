@@ -2,7 +2,6 @@ import styled from 'styled-components/native'
 import {moderateScale} from '../../styles'
 
 export const WrapperPilots = styled.View`
-  width: 100%;
   height: ${moderateScale(100)};
 
   flex-direction: column;
