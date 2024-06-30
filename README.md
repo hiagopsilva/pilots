@@ -1,9 +1,9 @@
 <div align="center">
   <img src="https://github.com/hiagopsilva/pilots/assets/47197695/9124b2f1-18e3-4136-b652-5be81e49cc18" width="200" height="200">
   <h1>Pilots - Mobile</h1>
-</div>
 
-Este é o projeto mobile Pilots desenvolvido com React Native (Android e iOS).
+  <span>Este é o projeto mobile Pilots desenvolvido com React Native (Android e iOS).</span>
+</div>
 
 ## Demonstração
 
@@ -16,8 +16,6 @@ Este é o projeto mobile Pilots desenvolvido com React Native (Android e iOS).
 <img width="400" src="https://github.com/hiagopsilva/pilots/assets/47197695/5aadae1f-7ecd-4103-abc7-43f70b21458c" >
 
 > Este README fornecerá as informações necessárias para configurar, instalar e iniciar a aplicação tanto no ambiente de desenvolvimento quanto nos simuladores ou emuladores para iOS e Android.
-
-
 
 ## Como Começar
 
