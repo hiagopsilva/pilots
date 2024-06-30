@@ -40,13 +40,6 @@ export const ContainerItem = styled.View`
   padding: 12px;
 `
 
-export const CountryImage = styled.Image`
-  background-color: red;
-  width: ${moderateScale(28)};
-  height: ${moderateScale(28)};
-  border-radius: 50px;
-`
-
 export const ContentItem = styled.View`
   margin-left: 16px;
 `

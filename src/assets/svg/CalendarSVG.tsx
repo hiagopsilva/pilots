@@ -7,13 +7,13 @@ type Props = {
   height?: number
 }
 
-const CalendarSVG: FC<Props> = ({width = 14, height = 15, ...rest}) => {
+const CalendarSVG: FC<Props> = ({width = 14, height = 14, ...rest}) => {
   return (
     <Svg
       {...rest}
       height={height}
       width={width}
-      viewBox="0 0 14 15"
+      viewBox="0 0 14 14"
       fill="none">
       <Defs>
         <ClipPath id="clip0">
