@@ -65,12 +65,20 @@ yarn ios
 ```
 
 ### Libs utilizadas
-- React Navigation (`react-navigation`): [link documentação](https://reactnavigation.org)
-- Styled components (`styled-components`): [link documentação](https://styled-components.com)
-- Date fns (`date-fns`): [link documentação](https://date-fns.org)
-- React Native iphone screen helper (`react-native-iphone-screen-helper`): [link documentação](https://www.npmjs.com/package/react-native-iphone-screen-helper)
-- React Native size matters (`react-native-size-matters`): [link documentação](https://github.com/nirsky/react-native-size-matters)
-- React Native Svg (`react-native-svg`): [link documentação](https://www.npmjs.com/package/react-native-svg)
+- React Navigation (`react-navigation`): <br />
+[link documentação](https://reactnavigation.org)
+
+- Styled components (`styled-components`): <br />[link documentação](https://styled-components.com)
+
+- Date fns (`date-fns`):<br /> [link documentação](https://date-fns.org)
+
+- React Native iphone screen helper (`react-native-iphone-screen-helper`):<br />[link documentação](https://www.npmjs.com/package/react-native-iphone-screen-helper)
+
+- React Native size matters (`react-native-size-matters`): <br />[link documentação](https://github.com/nirsky/react-native-size-matters)
+
+- React Native Svg (`react-native-svg`): <br />
+[link documentação](https://www.npmjs.com/package/react-native-svg)
+
 
 <br />
 <br />
