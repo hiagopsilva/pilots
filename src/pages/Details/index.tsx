@@ -4,6 +4,7 @@ import {Container, ContentInfo, Description, Title} from './styles'
 import HeaderDetails from '../../components/HeaderDetails'
 import ListPilots from '../../components/ListPilots'
 import Loading from '../../components/Loading'
+import {RefreshControl} from 'react-native'
 
 type Props = {
   navigation: any
@@ -14,6 +15,7 @@ const Details: React.FC<Props> = ({navigation}) => {
     [] as PilotsTypes.Driver[],
   )
   const [loading, setLoading] = useState(false)
+  const [refreshing, setRefreshing] = useState(false)
 
   const goBack = () => {
     navigation.goBack()
@@ -21,6 +23,8 @@ const Details: React.FC<Props> = ({navigation}) => {
 
   const handlePilots = async () => {
     try {
+      setLoading(true)
+
       const response = await fetch('https://ergast.com/api/f1/drivers.json')
 
       const data = await response.json()
@@ -41,7 +45,6 @@ const Details: React.FC<Props> = ({navigation}) => {
   }
 
   useEffect(() => {
-    setLoading(true)
     handlePilots()
   }, [])
 
@@ -49,7 +52,10 @@ const Details: React.FC<Props> = ({navigation}) => {
     <>
       {loading && <Loading />}
 
-      <Container>
+      <Container
+        refreshControl={
+          <RefreshControl refreshing={loading} onRefresh={handlePilots} />
+        }>
         <HeaderDetails title="História" onPress={goBack} />
 
         <ContentInfo>
