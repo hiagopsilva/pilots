@@ -1,5 +1,4 @@
 import React from 'react'
-import {ImageSourcePropType} from 'react-native'
 import {
   BirthPilot,
   ContainerItem,
@@ -11,19 +10,22 @@ import {
   NamePilot,
   TitleList,
 } from './styles'
+import {format, parseISO} from 'date-fns'
+import {ptBR} from 'date-fns/locale'
 
 type Props = {
-  pilots?: {
-    name: string
-    date: string
-    flag: ImageSourcePropType | undefined
-  }[]
+  pilots?: PilotsTypes.Driver[]
   messageNoData?: string
 }
 const ListPilots: React.FC<Props> = ({
   pilots,
   messageNoData = 'Nenhum piloto encontrado.',
 }) => {
+  const formatDate = (dateString) => {
+    const date = parseISO(dateString)
+    return format(date, "dd 'de' MMMM 'de' yyyy", {locale: ptBR})
+  }
+
   return (
     <ContainerList>
       <TitleList>Pilotos</TitleList>
@@ -38,10 +40,12 @@ const ListPilots: React.FC<Props> = ({
         <ContentList>
           {pilots.map((piloto, index) => (
             <ContainerItem key={index}>
-              <CountryImage source={piloto.flag} />
+              {/* <CountryImage source={piloto.flag} /> */}
               <ContentItem>
-                <NamePilot>{piloto.name}</NamePilot>
-                <BirthPilot>Nascido em {piloto.date}</BirthPilot>
+                <NamePilot>{piloto.givenName}</NamePilot>
+                <BirthPilot>
+                  Nascido em {formatDate(piloto.dateOfBirth)}
+                </BirthPilot>
               </ContentItem>
             </ContainerItem>
           ))}
