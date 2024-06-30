@@ -11,6 +11,7 @@ import {
 } from './styles'
 import ListCountry from '../ListCountry'
 import {formatDate} from '../../utils/helpers'
+import {FORMAT_DATE} from '../../utils/constants'
 
 type Props = {
   pilots?: PilotsTypes.Driver[]
@@ -40,7 +41,8 @@ const ListPilots: React.FC<Props> = ({
               <ContentItem>
                 <NamePilot>{pilot.givenName}</NamePilot>
                 <BirthPilot>
-                  Nascido em {formatDate(pilot.dateOfBirth)}
+                  Nascido em{' '}
+                  {formatDate(pilot.dateOfBirth, FORMAT_DATE.MEDIUM_DATE)}
                 </BirthPilot>
               </ContentItem>
             </ContainerItem>

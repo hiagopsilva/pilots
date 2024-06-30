@@ -15,3 +15,10 @@ export const PILOTS_CONSTANTS: PodiumTypes.Item[] = [
     team: 'Mercedes',
   },
 ]
+
+export const FORMAT_DATE = {
+  LONG_DATE_WITH_YEAR: "EEEEEE., d 'de' MMM., 'De' yyyy HH:mm",
+  LONG_DATE: "EEEEEE., d 'De' MMM., HH:mm",
+  SMALL_DATE: 'd, HH:mm',
+  MEDIUM_DATE: "dd 'de' MMMM 'de' yyyy",
+}

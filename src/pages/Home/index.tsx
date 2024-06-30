@@ -9,6 +9,7 @@ import Footer from '../../components/Footer'
 import ArrowCrookedSVG from '../../assets/svg/ArrowCrookedSVG'
 
 import {PILOTS_CONSTANTS} from '../../utils/constants'
+import {formatDate} from '../../utils/helpers'
 
 type Props = {
   navigation: any
@@ -25,7 +26,8 @@ const Home: React.FC<Props> = ({navigation}) => {
             isSecond
             textRace="Última corrida"
             textLocalRace="GP de Abu Dhabi"
-            textDateRace="Data Sáb., 2 de Jan., De 2023 12:00"
+            labelDate="Data"
+            textDateRace={formatDate(new Date('2023-01-02T12:00:00'))}
             textCircuitLabel="Circuito de Yas Marina Circuit"
             imageTraced={require('../../assets/images/car.png')}
             arrowRightCrookedIcon={<ArrowCrookedSVG />}

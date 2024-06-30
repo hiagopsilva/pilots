@@ -61,6 +61,14 @@ export const TextDateRace = styled.Text<PropsIsSecond>`
   font-family: 'Inter-SemiBold';
   color: ${(props) =>
     props.isSecond ? props.theme.colors.textInfo : props.theme.colors.text};
+
+  text-transform: capitalize;
+`
+
+export const LabelDate = styled.Text<PropsIsSecond>`
+  font-size: ${moderateScale(14)};
+  font-family: 'Inter-SemiBold';
+  color: ${(props) => props.theme.colors.base.black};
 `
 
 export const ContainerInfoRace = styled.View<PropsIsSecond>`
